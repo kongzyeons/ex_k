@@ -4,6 +4,7 @@
 <img src="er diagram.png">
 
 <h2>Run database on Docker</h2>
+```bash
 # mariadb
 docker pull mariadb
 
@@ -14,3 +15,5 @@ docker pull mongo
 docker-compose up -d
 #stop container
 docker-compose down
+```
+
