@@ -1,5 +1,16 @@
 <h1>test_komgrip</h1>
 
-Er_Diagram
+<h2>Er Diagram</h2>
 <img src="er diagram.png">
 
+<h2>Run database on Docker</h2>
+# mariadb
+docker pull mariadb
+
+# mongodb
+docker pull mongo
+
+#start container
+docker-compose up -d
+#stop container
+docker-compose down
