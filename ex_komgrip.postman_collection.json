@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "e3b6f068-d114-43a6-98e5-bc431e42a9a9",
+		"name": "ex_komgrip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16750692"
+	},
+	"item": [
+		{
+			"name": "ex1",
+			"item": [
+				{
+					"name": "CreateBeer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_image",
+									"type": "file",
+									"src": "/Users/suphanatboonbundransuk/Desktop/image_test.jpg"
+								},
+								{
+									"key": "name",
+									"value": "b6",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "c1",
+									"type": "text"
+								},
+								{
+									"key": "detail",
+									"value": "d1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/beer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"beer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBeer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"b1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/beer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"beer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBeerPaginate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page_size\" : 3,\n    \"page_number\" :2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/beer/pagination",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"beer",
+								"pagination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBeer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/beer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"beer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBeer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_image",
+									"type": "file",
+									"src": "/Users/suphanatboonbundransuk/Desktop/image_test2.png"
+								},
+								{
+									"key": "name",
+									"value": "b100",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "c7",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "detail",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/beer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"beer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ex2",
+			"item": [
+				{
+					"name": "GetQuery",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"parent_id\" : 1,\n    \"icon_id\" : 16,\n    \"is_children\" : false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/admin/getquery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"admin",
+								"getquery"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
