@@ -1,0 +1,16 @@
+version: '3'
+services:
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    environment: 
+      - MARIADB_ROOT_PASSWORD=P@ssw0rd
+      - MARIADB_DATABASE=Beer
+    ports: 
+      - 3306:3306
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports: 
+      - 27017:27017
