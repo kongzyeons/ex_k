@@ -1,4 +1,4 @@
-<h1>test_komgrip</h1>
+<h1></h1>
 
 <h2>Er Diagram</h2>
 <img src="er diagram.png">
